@@ -16,10 +16,12 @@ public class SalleServiceTest {
     @Before
     public void setUp() {
         salleService = new SalleService();
+
+        // Création d'une salle avant chaque test
         salle = new Salle();
         salle.setCode("A101"); // Exemple de code pour la salle
 
-        // Créer et persister la salle avant chaque test
+        // Persister la salle dans la base de données
         salleService.create(salle);
     }
 
@@ -34,7 +36,7 @@ public class SalleServiceTest {
 
     @Test
     public void testCreate() {
-        assertNotNull("Salle should have been created with an ID", salle.getId());
+        assertTrue("Salle should have been created with an ID", salle.getId() > 0);
     }
 
     @Test
