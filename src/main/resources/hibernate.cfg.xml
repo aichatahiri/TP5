@@ -27,6 +27,8 @@
         <!-- ✅ Mapping des entités -->
         <mapping class="entities.Salle"/>
         <mapping class="entities.Machine"/>
+        <mapping class="entities.Category"/>
+        <mapping class="entities.Product"/>
 
     </session-factory>
 </hibernate-configuration>
